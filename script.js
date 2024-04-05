@@ -3,9 +3,9 @@ var rollV, nameV, genderV, addressV; //variaveis que irão receber os dados cada
 function readFom() {
   rollV = document.getElementById("roll").value; 
   nameV = document.getElementById("name").value;
-  genderV = document.getElementById("gender").value;
+  telefoneV = document.getElementById("telefone").value;
   addressV = document.getElementById("address").value;
-  console.log(rollV, nameV, addressV, genderV);
+  console.log(rollV, nameV, addressV, telefoneV);
 }
 
 document.getElementById("insert").onclick = function () {
@@ -17,13 +17,13 @@ document.getElementById("insert").onclick = function () {
     .set({
       rollNo: rollV,
       name: nameV,
-      gender: genderV,
+      telefone: telefoneV,
       address: addressV,
     });
   alert("Dados Inseridos");
   document.getElementById("roll").value = "";
   document.getElementById("name").value = "";
-  document.getElementById("gender").value = "";
+  document.getElementById("telefone").value = "";
   document.getElementById("address").value = "";
 };
 
