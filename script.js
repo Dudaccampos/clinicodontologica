@@ -1,15 +1,17 @@
-var rollV, nameV, genderV, addressV; //variaveis que irão receber os dados cadastrados
+var rollV, nameV, telefoneV, addressV, appointmentDateV, appointmentTimeV; // variáveis que irão receber os dados cadastrados
 
-function readFom() {
+function readForm() {
   rollV = document.getElementById("roll").value; 
   nameV = document.getElementById("name").value;
   telefoneV = document.getElementById("telefone").value;
   addressV = document.getElementById("address").value;
-  console.log(rollV, nameV, addressV, telefoneV);
+  appointmentDateV = document.getElementById("appointment-date").value;
+  appointmentTimeV = document.getElementById("appointment-time").value;
+  console.log(rollV, nameV, telefoneV, addressV, appointmentDateV, appointmentTimeV);
 }
 
 document.getElementById("insert").onclick = function () {
-  readFom();
+  readForm();
 
   firebase
     .database()
@@ -19,12 +21,14 @@ document.getElementById("insert").onclick = function () {
       name: nameV,
       telefone: telefoneV,
       address: addressV,
+      appointmentDate: appointmentDateV,
+      appointmentTime: appointmentTimeV
     });
   alert("Dados Inseridos");
   document.getElementById("roll").value = "";
   document.getElementById("name").value = "";
   document.getElementById("telefone").value = "";
   document.getElementById("address").value = "";
+  document.getElementById("appointment-date").value = "";
+  document.getElementById("appointment-time").value = "";
 };
-
-
