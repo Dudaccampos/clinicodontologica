@@ -194,3 +194,24 @@ header {
     font-size: 20px;
 
 }
+
+.form input[type="date"],
+.form input[type="time"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form input[type="date"]:focus,
+.form input[type="time"]:focus {
+    outline: none;
+    border-color: #47648d;
+}
+
+.form h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
